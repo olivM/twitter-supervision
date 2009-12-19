@@ -1,4 +1,5 @@
 namespace :fetch do
+  
   desc "get next page"
   task :next, :term, :needs => :environment do
     puts "getting next page for #{args[:term]} "

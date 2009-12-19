@@ -11,9 +11,8 @@ class CreateTweets < ActiveRecord::Migration
       t.integer   :to_user_id, :limit => 8
       t.string    :profile_image_url
       t.string    :source
+      t.string    :url
       t.string    :iso_language_code
-      t.datetime  :sent_at
-      t.integer  :term_id
       t.timestamps
     end
   end

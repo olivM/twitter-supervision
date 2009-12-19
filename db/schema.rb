@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091216205102) do
+ActiveRecord::Schema.define(:version => 20091216205355) do
 
   create_table "options", :force => true do |t|
     t.string   "name"
@@ -18,7 +18,16 @@ ActiveRecord::Schema.define(:version => 20091216205102) do
     t.datetime "updated_at"
   end
 
+  create_table "term_tweets", :force => true do |t|
+    t.integer  "term_id"
+    t.integer  "tweet_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "terms", :force => true do |t|
+    t.string   "name"
+    t.integer  "last_page",  :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -36,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20091216205102) do
     t.string   "source"
     t.string   "iso_language_code"
     t.datetime "sent_at"
+    t.integer  "term_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -18,6 +18,9 @@ Rails::Initializer.run do |config|
 
   config.gem "twitter"
   config.gem "hpricot"
+  config.gem "googlecharts"
+
+  require 'gchart'
 
   # config.gem "bj"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
@@ -42,4 +45,7 @@ Rails::Initializer.run do |config|
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
+  
+  GOOGLE_API_KEY = "ABQIAAAA1ayGMcTPxxXRoOhC91BZdRQBgHj79ruf7Xf5R3THEdeTpKQxNhRJuP65uujyVfWxvxGru82lD7wGwg"
+  
 end
